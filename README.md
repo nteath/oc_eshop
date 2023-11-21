@@ -3,8 +3,10 @@
 ## Description
 Implemented a small e-commerce application following a 100% REST API architecture.
 
-Deployed the application on a server to test the functionality easily and
-included a sample POSTMAN collection in the repository as well.
+Deployed the application on a server to test the functionality easily accessible
+at https://oc.nterelis.me.
+
+I have included a sample POSTMAN collection in the repository as well.
 
 ## Tech Stack
 - PHP 8.1.25

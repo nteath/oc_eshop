@@ -15,7 +15,7 @@ I have included a sample POSTMAN collection in the repository as well.
 
 
 ## Installation
-- `git@github.com:nteath/oc_eshop.git`
+- `git clone git@github.com:nteath/oc_eshop.git`
 - `composer install`
 - `php artisan migrate --seed`
 - `php artisan serve`

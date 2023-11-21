@@ -35,5 +35,4 @@ I have included a sample POSTMAN collection in the repository as well.
 ## Areas for improvement
 - Authentication system using sanctum/passport.
 - Multi-lingual server errors/messages.
-- Email sending implementation.
 - API Versioning.

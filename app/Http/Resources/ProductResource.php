@@ -17,12 +17,12 @@ class ProductResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'id'        => $this->uuid,
-            'title'     => ucfirst($this->name),
-            'desc'      => $this->description,
-            'thumbnail' => $this->photo,
-            'amount'    => $this->price,
-            'available' => $this->stock_quantity
+            'id'          => $this->uuid,
+            'title'       => ucfirst($this->name),
+            'description' => $this->description,
+            'thumbnail'   => $this->photo,
+            'amount'      => $this->price,
+            'available'   => $this->stock_quantity
         ];
     }
 }

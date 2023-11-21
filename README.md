@@ -1,21 +1,37 @@
-# Assignment
-## _v1.2.0_
+# Implementation
 
-We’d like you to create a small e-commerce application for us to get some insights in your skillset. Focus on the PHP and especially the separation of concern, the UI is optional. Please dont spend more than two hours on this assignment.
+## Description
+Implemented a small e-commerce application following a 100% REST API architecture.
 
-# Don’ts
-- Don't spend more than two hours
-- Do not include new packages
+Deployed the application on a server to test the functionality easily and
+included a sample POSTMAN collection in the repository as well.
 
-# Installation
-- `git clone git@github.com:Orderchamp/assignment.git`
+## Tech Stack
+- PHP 8.1.25
+- Laravel 9.6.0
+- MariaDB 15.1
+
+
+## Installation
+- `git@github.com:nteath/oc_eshop.git`
 - `composer install`
+- `php artisan migrate --seed`
 - `php artisan serve`
 
-# Description
-Our users should be able to add products that are in stock to their shopping cart. During checkout, our visitors should be able to become users and our users should be able to review their previously stored information (name, address, contact details).
+## Assumptions
+- No UI is provided.
+- Payment gateway is out of this project's scope.
+- Email sending is out of this project's scope.
+- Products have stock availability.
+- User cannot add more than 10 copies of the same product.
+- Cart data is persisted to database following stateless API practices.
+- Simple token based authentication implemented.
+- Product prices are stored in cents.
+- User can checkout as guest.
+- User can checkout and register.
 
-Fifteen minutes after checkout, a user should receive a discount code of € 5,- for future purchases. If a user chooses to use a discount code, you should keep track of what discount code was applied and what amount was subtracted from the checkout.
-
-# Out-of-scope
-The UI is optional. Payments in this application are based on invoices. Invoices are out of scope :-)
+## Areas for improvement
+- Authentication system using sanctum/passport.
+- Multi-lingual server errors/messages.
+- Email sending implementation.
+- API Versioning.

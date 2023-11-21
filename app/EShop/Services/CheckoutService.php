@@ -25,10 +25,11 @@ class CheckoutService implements ServiceInterface
              ->addAddress($request);
 
         $this->order->save();
+        $this->order->load('user');
 
         event(new OrderCompleted($this->order));
 
-        return $this->order->load('user');
+        return $this->order;
     }
 
 

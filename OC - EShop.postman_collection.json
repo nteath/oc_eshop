@@ -1,0 +1,509 @@
+{
+	"info": {
+		"_postman_id": "983a0957-46a2-4ec4-a517-8a0efd7c242f",
+		"name": "OC - EShop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10646543"
+	},
+	"item": [
+		{
+			"name": "List Products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://oc.nterelis.me/api/products",
+					"protocol": "https",
+					"host": [
+						"oc",
+						"nterelis",
+						"me"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Specific Product",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://oc.nterelis.me/api/products/1704d9ce-3c38-34fe-a47c-0f5274a5acae",
+					"protocol": "https",
+					"host": [
+						"oc",
+						"nterelis",
+						"me"
+					],
+					"path": [
+						"api",
+						"products",
+						"1704d9ce-3c38-34fe-a47c-0f5274a5acae"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product To New Cart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_id\": \"1704d9ce-3c38-34fe-a47c-0f5274a5acae\",\r\n    \"quantity\": 1\r\n}"
+				},
+				"url": {
+					"raw": "https://oc.nterelis.me/api/cart-items",
+					"protocol": "https",
+					"host": [
+						"oc",
+						"nterelis",
+						"me"
+					],
+					"path": [
+						"api",
+						"cart-items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product To Existing Cart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_id\": \"88fa9128-1167-3e68-983d-1a278cda5695\",\r\n    \"quantity\": 1,\r\n    \"cart_id\": \"20767126-2c6b-47b6-8a64-964664655a4b\"\r\n}"
+				},
+				"url": {
+					"raw": "https://oc.nterelis.me/api/cart-items",
+					"protocol": "https",
+					"host": [
+						"oc",
+						"nterelis",
+						"me"
+					],
+					"path": [
+						"api",
+						"cart-items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product To Cart As User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "OEOdbLB9asaMSFFKVFqb1zHtz3z1pHc92rn4UAy0x7GoRVEytcAEYRKbsayt",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_id\": \"15306755-b0c4-37e2-870d-431e5c90da25\",\r\n    \"quantity\": 1\r\n}"
+				},
+				"url": {
+					"raw": "https://oc.nterelis.me/api/cart-items",
+					"protocol": "https",
+					"host": [
+						"oc",
+						"nterelis",
+						"me"
+					],
+					"path": [
+						"api",
+						"cart-items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Cart Details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://oc.nterelis.me/api/carts/20767126-2c6b-47b6-8a64-964664655a4b",
+					"protocol": "https",
+					"host": [
+						"oc",
+						"nterelis",
+						"me"
+					],
+					"path": [
+						"api",
+						"carts",
+						"20767126-2c6b-47b6-8a64-964664655a4b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Apply Discount on Cart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cart_id\": \"20767126-2c6b-47b6-8a64-964664655a4b\",\r\n    \"coupon\": \"oc\"\r\n}"
+				},
+				"url": {
+					"raw": "https://oc.nterelis.me/api/carts/discount",
+					"protocol": "https",
+					"host": [
+						"oc",
+						"nterelis",
+						"me"
+					],
+					"path": [
+						"api",
+						"carts",
+						"discount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Checkout as Guest with Registration",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cart_id\": \"20767126-2c6b-47b6-8a64-964664655a4b\",\r\n    \"name\": \"Thanasis\",\r\n    \"email\": \"nteath@gmail.com\",\r\n    \"address\": \"Papafi str. 25, 54453, Thessaloniki, Greece\",\r\n    \"password\": \"nteath\",\r\n    \"password_confirmation\": \"nteath\",\r\n    \"username\": \"nteath\"\r\n}"
+				},
+				"url": {
+					"raw": "https://oc.nterelis.me/api/checkout",
+					"protocol": "https",
+					"host": [
+						"oc",
+						"nterelis",
+						"me"
+					],
+					"path": [
+						"api",
+						"checkout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Checkout As Guest without Registration",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cart_id\": \"20767126-2c6b-47b6-8a64-964664655a4b\",\r\n    \"name\": \"Thanasis\",\r\n    \"email\": \"nteath@gmail.com\",\r\n    \"address\": \"Papafi str. 25, 54453, Thessaloniki, Greece\"\r\n}"
+				},
+				"url": {
+					"raw": "https://oc.nterelis.me/api/checkout",
+					"protocol": "https",
+					"host": [
+						"oc",
+						"nterelis",
+						"me"
+					],
+					"path": [
+						"api",
+						"checkout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Checkout as Logged In User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "OEOdbLB9asaMSFFKVFqb1zHtz3z1pHc92rn4UAy0x7GoRVEytcAEYRKbsayt",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cart_id\": \"562f4fd6-e627-4a41-884a-fd635896ae76\",\r\n    \"name\": \"Thanasis\",\r\n    \"email\": \"nteath@gmail.com\",\r\n    \"address\": \"Papafi str. 25, 54453, Thessaloniki, Greece\"\r\n}"
+				},
+				"url": {
+					"raw": "https://oc.nterelis.me/api/checkout",
+					"protocol": "https",
+					"host": [
+						"oc",
+						"nterelis",
+						"me"
+					],
+					"path": [
+						"api",
+						"checkout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"nteath\",\r\n    \"password\": \"nteath\"\r\n}"
+				},
+				"url": {
+					"raw": "https://oc.nterelis.me/api/login",
+					"protocol": "https",
+					"host": [
+						"oc",
+						"nterelis",
+						"me"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "OEOdbLB9asaMSFFKVFqb1zHtz3z1pHc92rn4UAy0x7GoRVEytcAEYRKbsayt",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://oc.nterelis.me/api/users/me",
+					"protocol": "https",
+					"host": [
+						"oc",
+						"nterelis",
+						"me"
+					],
+					"path": [
+						"api",
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "g1EVagmSV1pdPAxNzYNXWqZOhY5x0HvmqZsHibAxJImYx9WkgGHXCY4YQdEY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://oc.nterelis.me/api/logout",
+					"protocol": "https",
+					"host": [
+						"oc",
+						"nterelis",
+						"me"
+					],
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
